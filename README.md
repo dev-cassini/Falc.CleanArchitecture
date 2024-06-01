@@ -1,0 +1,1 @@
+# FALC Clean Architecture Shared Library #
