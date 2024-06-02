@@ -12,7 +12,7 @@ env:
 
 defaults:
   run:
-    shell: pwsh
+    shell: bash
 
 jobs:
   create_nuget_package:
