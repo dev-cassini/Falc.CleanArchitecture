@@ -30,8 +30,7 @@ jobs:
 
     # Create the NuGet package in the folder from the environment variable NuGetDirectory
     - run: |
-        GITHUB_REF_NAME="${{ github.ref_name }}"
-        VERSION="${GITHUB_REF_NAME//v}"
+        VERSION="${${{ github.ref_name }}//v}"
         dotnet pack ./src/Falc.CleanArchitecture.Infrastructure/ --configuration Release --output ${{ env.NuGetDirectory }} -p:PackageVersion=$VERSION
 
     # Publish the NuGet package as an artifact, so they can be used in the following jobs
