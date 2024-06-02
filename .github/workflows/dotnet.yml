@@ -30,7 +30,7 @@ jobs:
 
     # Create the NuGet package in the folder from the environment variable NuGetDirectory
     - run: |
-        GITHUB_REF_NAME=${{ github.ref_name }}
+        GITHUB_REF_NAME="${{ github.ref_name }}"
         VERSION="${GITHUB_REF_NAME//v}"
         dotnet pack ./src/Falc.CleanArchitecture.Infrastructure/ --configuration Release --output ${{ env.NuGetDirectory }} -p:PackageVersion=$VERSION
 
