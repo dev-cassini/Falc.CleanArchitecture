@@ -4,6 +4,8 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Authors>Ryan Dremza</Authors>
+        <Description>Class library for shared code used within the infrastructure layer of Clean Architecture.</Description>
     </PropertyGroup>
 
     <ItemGroup>
