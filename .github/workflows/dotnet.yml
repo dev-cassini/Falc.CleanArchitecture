@@ -23,8 +23,10 @@ jobs:
         fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
 
     # Install the .NET SDK indicated in the global.json file
-    - name: Setup .NET
+    - name: Setup .NET Core
       uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
 
     # Create the NuGet package in the folder from the environment variable NuGetDirectory
     - run: dotnet pack ./src/Falc.CleanArchitecture.Infrastructure/ --configuration Release --output ${{ env.NuGetDirectory }}
