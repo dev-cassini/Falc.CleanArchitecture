@@ -12,7 +12,7 @@ public class Configurator(IServiceCollection serviceCollection)
     /// Configure and register services relating to persistence.
     /// </summary>
     /// <param name="configuratorAction">Choose how to configure your persistence layer.</param>
-    /// <returns>The same configurator.</returns>
+    /// <returns>A reference to this instance after the operation has completed.</returns>
     public Configurator AddPersistence(Action<Persistence.Configurator> configuratorAction)
     {
         var configurator = new Persistence.Configurator(serviceCollection);

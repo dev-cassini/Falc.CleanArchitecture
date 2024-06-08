@@ -13,7 +13,7 @@ public static class ServiceProviderExtensions
     /// </summary>
     /// <param name="serviceProvider">Service provider in which the <see cref="DbContext"/> is registered.</param>
     /// <typeparam name="T">Type of <see cref="DbContext"/>.</typeparam>
-    /// <returns>The same service provider.</returns>
+    /// <returns>A reference to this instance after the operation has completed.</returns>
     public static IServiceProvider MigrateDatabase<T>(this IServiceProvider serviceProvider) 
         where T : DbContext
     {

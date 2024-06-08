@@ -12,7 +12,7 @@ public class Configurator(IServiceCollection serviceCollection)
     /// Configure and register services relating to Entity Framework.
     /// </summary>
     /// <param name="configuratorAction">Choose how to configure Entity Framework.</param>
-    /// <returns>The same configurator.</returns>
+    /// <returns>A reference to this instance after the operation has completed.</returns>
     public Configurator AddEntityFramework(Action<EntityFramework.Configurator> configuratorAction)
     {
         var configurator = new EntityFramework.Configurator(serviceCollection);
