@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falc.CleanArchitecture.Appl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falc.CleanArchitecture.Domain", "src\Falc.CleanArchitecture.Domain\Falc.CleanArchitecture.Domain.csproj", "{690E535E-376B-4F18-AAAF-F6BF0DE7D27E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falc.CleanArchitecture.Application.Test.Component", "test\Falc.CleanArchitecture.Application.Test.Component\Falc.CleanArchitecture.Application.Test.Component.csproj", "{535FB85D-BB1F-4D02-B7C8-1556E6FA5178}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falc.CleanArchitecture.Test.Component", "test\Falc.CleanArchitecture.Test.Component\Falc.CleanArchitecture.Test.Component.csproj", "{535FB85D-BB1F-4D02-B7C8-1556E6FA5178}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

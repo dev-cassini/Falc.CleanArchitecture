@@ -1,3 +1,4 @@
+using Falc.CleanArchitecture.Application;
 using Falc.CleanArchitecture.Application.Messaging.MediatR;
 using Falc.CleanArchitecture.Infrastructure;
 using MediatR;
@@ -5,7 +6,7 @@ using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Falc.CleanArchitecture.Application.Test.Component;
+namespace Falc.CleanArchitecture.Test.Component;
 
 [TestFixture]
 public class Tests
@@ -19,9 +20,8 @@ public class Tests
             {
                 configurator.AddMediatR(mediatRConfigurator =>
                 {
-                    mediatRConfigurator
-                        .RegisterServicesFromAssembly(typeof(Marker).Assembly)
-                        .ConfigurePipeline(pipelineConfigurator =>
+                    MediatRServiceConfigurationExtensions.ConfigurePipeline(mediatRConfigurator
+                            .RegisterServicesFromAssembly(typeof(Marker).Assembly), pipelineConfigurator =>
                         {
                             pipelineConfigurator.AddUnitOfWorkPipelineWrapper();
                         });

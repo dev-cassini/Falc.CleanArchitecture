@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Falc.CleanArchitecture.Application.Test.Component;
+namespace Falc.CleanArchitecture.Test.Component;
 
 public class TestDbContext : DbContext
 {
