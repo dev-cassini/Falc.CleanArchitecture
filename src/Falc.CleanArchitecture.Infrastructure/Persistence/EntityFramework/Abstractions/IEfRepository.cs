@@ -1,6 +1,8 @@
+using Falc.CleanArchitecture.Domain;
+
 namespace Falc.CleanArchitecture.Infrastructure.Persistence.EntityFramework.Abstractions;
 
 /// <summary>
 /// An Entity Framework repository.
 /// </summary>
-public interface IEfRepository { }
+public interface IEfRepository : IRepository;

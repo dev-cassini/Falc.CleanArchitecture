@@ -15,8 +15,7 @@ public class Configurator(IServiceCollection serviceCollection)
     /// <returns>A reference to this instance after the operation has completed.</returns>
     public Configurator AddMediatR(Action<MediatRServiceConfiguration> configuratorAction)
     {
-        var configurator = new MediatRServiceConfiguration();
-        configuratorAction.Invoke(configurator);
+        serviceCollection.AddMediatR(configuratorAction);
         
         return this;
     }

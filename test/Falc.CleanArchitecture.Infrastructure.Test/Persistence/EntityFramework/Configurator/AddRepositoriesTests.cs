@@ -1,4 +1,5 @@
 using System.Reflection;
+using Falc.CleanArchitecture.Domain;
 using Falc.CleanArchitecture.Infrastructure.Persistence.EntityFramework.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -26,13 +27,16 @@ public class AddRepositoriesTests
         
         Assert.Multiple(() =>
         {
-            Assert.That(serviceProvider.GetServices<ITestEfRepository>(), Is.Not.Null);
-            Assert.That(serviceProvider.GetServices<IAnotherTestEfRepository>(), Is.Not.Null);
+            Assert.That(serviceProvider.GetService<ITestRepository>(), Is.Not.Null);
+            Assert.That(serviceProvider.GetService<IAnotherTestRepository>(), Is.Not.Null);
+            Assert.That(serviceProvider.GetService<INotAnEfRepository>(), Is.Null);
         });
     }
 
-    private interface ITestEfRepository : IEfRepository { }
-    private class TestEfRepository : ITestEfRepository { }
-    private interface IAnotherTestEfRepository : IEfRepository { }
-    private class AnotherTestEfRepository : IAnotherTestEfRepository { }
+    private interface ITestRepository : IRepository;
+    private class TestEfRepository : ITestRepository, IEfRepository;
+    private interface IAnotherTestRepository : IRepository;
+    private class AnotherTestEfRepository : IAnotherTestRepository, IEfRepository;
+    private interface INotAnEfRepository : IRepository;
+    private class NotAnEfRepository : INotAnEfRepository;
 }

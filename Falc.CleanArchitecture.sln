@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falc.CleanArchitecture.Infr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falc.CleanArchitecture.Application", "src\Falc.CleanArchitecture.Application\Falc.CleanArchitecture.Application.csproj", "{04C2F71E-185A-4BD4-AD96-59B2F88B667B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falc.CleanArchitecture.Domain", "src\Falc.CleanArchitecture.Domain\Falc.CleanArchitecture.Domain.csproj", "{690E535E-376B-4F18-AAAF-F6BF0DE7D27E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falc.CleanArchitecture.Application.Test.Component", "test\Falc.CleanArchitecture.Application.Test.Component\Falc.CleanArchitecture.Application.Test.Component.csproj", "{535FB85D-BB1F-4D02-B7C8-1556E6FA5178}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +39,20 @@ Global
 		{04C2F71E-185A-4BD4-AD96-59B2F88B667B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04C2F71E-185A-4BD4-AD96-59B2F88B667B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04C2F71E-185A-4BD4-AD96-59B2F88B667B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{690E535E-376B-4F18-AAAF-F6BF0DE7D27E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{690E535E-376B-4F18-AAAF-F6BF0DE7D27E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{690E535E-376B-4F18-AAAF-F6BF0DE7D27E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{690E535E-376B-4F18-AAAF-F6BF0DE7D27E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535FB85D-BB1F-4D02-B7C8-1556E6FA5178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535FB85D-BB1F-4D02-B7C8-1556E6FA5178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535FB85D-BB1F-4D02-B7C8-1556E6FA5178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535FB85D-BB1F-4D02-B7C8-1556E6FA5178}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4A79978E-CC20-4493-934D-C762E20DD650} = {9E5A02F7-D732-4DD5-BA3A-A27B5DD3CE10}
 		{85783335-9D41-42B6-AEE1-0FE0F8001AE3} = {2E4D5EC7-42F8-4864-AA90-E69A0D6E91E1}
 		{04C2F71E-185A-4BD4-AD96-59B2F88B667B} = {9E5A02F7-D732-4DD5-BA3A-A27B5DD3CE10}
+		{690E535E-376B-4F18-AAAF-F6BF0DE7D27E} = {9E5A02F7-D732-4DD5-BA3A-A27B5DD3CE10}
+		{535FB85D-BB1F-4D02-B7C8-1556E6FA5178} = {2E4D5EC7-42F8-4864-AA90-E69A0D6E91E1}
 	EndGlobalSection
 EndGlobal
