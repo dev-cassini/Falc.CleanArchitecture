@@ -1,21 +1,21 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Falc.CleanArchitecture.Infrastructure;
+namespace Falc.CleanArchitecture.Application;
 
 /// <summary>
-/// Configure infrastructure layer.
+/// Configure application layer.
 /// </summary>
 /// <param name="serviceCollection">Service collection to which services are registered.</param>
 public class Configurator(IServiceCollection serviceCollection)
 {
     /// <summary>
-    /// Configure and register services relating to persistence.
+    /// Configure and register services relating to MediatR.
     /// </summary>
-    /// <param name="configuratorAction">Choose how to configure your persistence layer.</param>
+    /// <param name="configuratorAction">Choose how to configure MediatR.</param>
     /// <returns>A reference to this instance after the operation has completed.</returns>
-    public Configurator AddPersistence(Action<Persistence.Configurator> configuratorAction)
+    public Configurator AddMediatR(Action<MediatRServiceConfiguration> configuratorAction)
     {
-        var configurator = new Persistence.Configurator(serviceCollection);
+        var configurator = new MediatRServiceConfiguration();
         configuratorAction.Invoke(configurator);
         
         return this;
