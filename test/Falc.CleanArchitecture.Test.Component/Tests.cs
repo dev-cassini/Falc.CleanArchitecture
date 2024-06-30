@@ -20,8 +20,9 @@ public class Tests
             {
                 configurator.AddMediatR(mediatRConfigurator =>
                 {
-                    MediatRServiceConfigurationExtensions.ConfigurePipeline(mediatRConfigurator
-                            .RegisterServicesFromAssembly(typeof(Marker).Assembly), pipelineConfigurator =>
+                    mediatRConfigurator
+                        .RegisterServicesFromAssembly(typeof(Marker).Assembly)
+                        .ConfigurePipeline(pipelineConfigurator =>
                         {
                             pipelineConfigurator.AddUnitOfWorkPipelineWrapper();
                         });
